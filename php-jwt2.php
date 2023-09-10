@@ -23,7 +23,7 @@ function base64url_encode($data) {
 }
 
 // Read service account details
-$authConfigString = file_get_contents("./push-notifications-3c140-042781ea3125.json");
+$authConfigString = file_get_contents("./push-notifications-3c140-f40e8cfb60d4.json");
 
 // Parse service account details
 $authConfig = json_decode($authConfigString);
@@ -54,9 +54,11 @@ $payload = json_encode(array(
 
 // Encode Header
 $base64UrlHeader = base64url_encode($header);
+echo "header ".$base64UrlHeader."<br>";
 
 // Encode Payload
 $base64UrlPayload = base64url_encode($payload);
+echo "payload ".$base64UrlPayload."<br>";
 
 // Create Signature Hash
 $result = openssl_sign($base64UrlHeader . "." . $base64UrlPayload, $signature, $secret, OPENSSL_ALGO_SHA256);
@@ -66,20 +68,20 @@ $base64UrlSignature = base64url_encode($signature);
 
 // Create JWT
 $jwt = $base64UrlHeader . "." . $base64UrlPayload . "." . $base64UrlSignature;
+echo "signature ".$base64UrlSignature."<br>";
 
 //-----Request token------
 $options = array('http' => array(
     'method'  => 'POST',
     'content' => 'grant_type=urn:ietf:params:oauth:grant-type:jwt-bearer&assertion='.$jwt,
-    'header'  =>
-        "Content-Type: application/x-www-form-urlencoded"
+    'header'  => 'Content-Type: application/x-www-form-urlencoded'
 ));
 $context  = stream_context_create($options);
 $responseText = file_get_contents("https://oauth2.googleapis.com/token", false, $context);
 
 $response = json_decode($responseText);
 
-echo "access token ".$response->access_token;
+echo "access token ".$response->access_token."<br>"."<br>";
 
 $token = $response->access_token;
 
@@ -100,7 +102,7 @@ $data = array(
         "id"            =>  "1",
         "status"        =>  "done",
     ),
-    "token" => "ceIaIeXQ-LEeN5JizmRthG:APA91bF8IIFKR79HEVKijJPLM0BP829IM_4DagN4BAEMJswWYis_4INZ_Cy_3AsgJT8aSDStONmNeXlQHJVeQDglGC6P6SOsAsJONk-oyUzQSM2DiwTNf9L2O8SZ2DvXIygAkx03cM2Y"
+    "token" => "dxC0GrLQqa5agBNnqIOLXy:APA91bEUy7lMR8Qsh2s5IGAX9mPHqkEb0N8y9IWW2-vuIB_K8TQsRhJN95lCTdAWNVdzAqolwi_zMjVe6N7JaNsOmtKZl_SyjIh9yrvdF5aVoyR6DTxixWRKlMfl1jXgCDrgwTyWq9rz"
   )
 );
 
@@ -126,4 +128,4 @@ if ($result === FALSE) {
 
 curl_close ($ch);
 
-echo $result."\r\n"."\r\n";
+echo $result."<br>";
