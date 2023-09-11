@@ -1,0 +1,100 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.gradle",
+    "module": "gradle-enterprise-gradle-plugin",
+    "version": "3.13.4",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.3-20230524133605+0000"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "gradle-enterprise-gradle-plugin-3.13.4.jar",
+          "url": "gradle-enterprise-gradle-plugin-3.13.4.jar",
+          "size": 11053263,
+          "sha512": "f669488abccd8f6a0c631809c951bc2dadd606217c1ad99dabcbdab11edd85b08ff71283a18ff954290681eede80fd358c5d18f4c482c35f252df8051306ef05",
+          "sha256": "33367ce34594bfd3bbba55de632e93f57fbc51692a4fd8a76237690914c0d580",
+          "sha1": "0d69b469637e60d473d638d659cfab6017cd3c21",
+          "md5": "1ce20471e1ccc2ff43655de900e3d42c"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "gradle-enterprise-gradle-plugin-3.13.4.jar",
+          "url": "gradle-enterprise-gradle-plugin-3.13.4.jar",
+          "size": 11053263,
+          "sha512": "f669488abccd8f6a0c631809c951bc2dadd606217c1ad99dabcbdab11edd85b08ff71283a18ff954290681eede80fd358c5d18f4c482c35f252df8051306ef05",
+          "sha256": "33367ce34594bfd3bbba55de632e93f57fbc51692a4fd8a76237690914c0d580",
+          "sha1": "0d69b469637e60d473d638d659cfab6017cd3c21",
+          "md5": "1ce20471e1ccc2ff43655de900e3d42c"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "gradle-enterprise-gradle-plugin-3.13.4-javadoc.jar",
+          "url": "gradle-enterprise-gradle-plugin-3.13.4-javadoc.jar",
+          "size": 370569,
+          "sha512": "d801bbe241b5127190f302d377babfe083c3dfe398640922ef7b65526ed1276d8b5a45446dcce104cef37fec14ac9383141f73d5cca9576253716d5d0055bad7",
+          "sha256": "b72cbfc5b2cd3a5877908fbb7951579a3bd5513950a300ff3e6dab6b4bb570b5",
+          "sha1": "ed8a5ba88210926995a5189e9c65b2e4d4648ab2",
+          "md5": "c9946bb201a04f62a7c054bd832018c7"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "gradle-enterprise-gradle-plugin-3.13.4-sources.jar",
+          "url": "gradle-enterprise-gradle-plugin-3.13.4-sources.jar",
+          "size": 20798,
+          "sha512": "4e1c17ca8950606e7c21d879cb177637879ae71bef19dc81cf314524dfff7102167b38619cd7967f6e29c73bd174de4487a42013b15c14928981cf251b216715",
+          "sha256": "3b7f0c073c48a3380782353fd6ceabd2baa08ac20da3c55d639cf9a1c000f117",
+          "sha1": "55a30276075849edaae58045cbdbc012e0656631",
+          "md5": "9b5b347da831f0e4f4f01616292a03ba"
+        }
+      ]
+    }
+  ]
+}
